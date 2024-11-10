@@ -1,0 +1,37 @@
++----------------+        +-----------------+       +--------------------+
+|   Gymnasium    | 1---M  |    Member       | M---M |     Session        |
+|----------------|        |-----------------|       |--------------------|
+| Gymnasium_ID   |        | Member_ID       |       | Session_ID         |
+| Name           |        | Last Name       |       | Sport Type         |
+| Address        |        | First Name      |       | Schedule           |
+| Phone Number   |        | Address         |       | Gymnasium_ID (FK)  |
++----------------+        | Date of Birth   |       +--------------------+
+                         | Gender          |
+                         | Gymnasium_ID (FK)|
+                         +-----------------+
+
+                    +-------------------+
+                    |    Coach          |
+                    |-------------------|
+                    | Coach_ID          |
+                    | Last Name         |
+                    | First Name        |
+                    | Age               |
+                    | Specialty         |
+                    +-------------------+
+                          ^   ^
+                          |   |
+                 +---------------------+
+                 |    Session_Coach    |
+                 |---------------------|
+                 | Session_ID (FK)     |
+                 | Coach_ID (FK)       |
+                 +---------------------+
+
++-------------------+
+|   Registration    |
+|-------------------|
+| Registration_ID   |
+| Member_ID (FK)    |
+| Session_ID (FK)   |
++-------------------+
